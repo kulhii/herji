@@ -1,0 +1,56 @@
+{
+    "name": "ethan",
+    "maps": [
+        {
+            "name": "ethan",
+            "id": "80208898-845b-4eeb-b8f7-cf0ef097a452",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "9be7cc92-3cb8-47b0-b72c-89a7ee82579a",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "AD",
+                    "id": "75cb33e9-30c6-4a94-b2cf-beb5c6d0c99e",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "ff22b725-2caf-4865-9822-0c0d149fda07",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "86dac64a-b5c7-41e0-9411-2e4ddb01a35d",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
