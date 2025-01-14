@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class mushrom : MonoBehaviour
@@ -7,6 +8,7 @@ public class mushrom : MonoBehaviour
     [SerializeField] private GameObject destroy;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
+
 
     private void Awake()
     {
@@ -21,11 +23,13 @@ public class mushrom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+  
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
-    }
+        
+        Destroy(gameObject);    }
+
+   
 }

@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Android.LowLevel;
+using UnityEngine.UI;
 
 public class Move : MonoBehaviour
 {
@@ -10,9 +14,16 @@ public class Move : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-
+    private Vector3 inicio;
 
     private float moveInput;
+   
+  
+    void Start()
+    {
+        inicio = transform.position;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -37,6 +48,26 @@ public class Move : MonoBehaviour
     {
         moveInput = value.Get<float>();
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "diedie")
+        {
+
+            Debug.Log("toca");
+            muere();
+
+        }
+
+    }
+    private void muere()
+    {
+        transform.position = inicio;
+
+    }
+
+
+
+
 
 
 }
