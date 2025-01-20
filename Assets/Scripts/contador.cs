@@ -6,6 +6,7 @@ using UnityEngine;
 public class contador : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI contadorsetas;
+    [SerializeField] private GameObject solosetascuentan;
     private int setas = 0;
 
 
@@ -16,8 +17,13 @@ public class contador : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "setas")
+        {
 
-        sumasetas();
+            Debug.Log("toca");
+            sumasetas();
+        }
+        
     }
     public void sumasetas()
     {
